@@ -1,0 +1,334 @@
+/* 
+ * 我的 Typora 主题 - 柔和明亮版
+ */
+
+:root {
+  /* 主色调 - 改为更柔和的配色 */
+  --main-color: #4a6fa5; /* 更柔和的蓝色 */
+  --main-bg-color: #fefefe; /* 修改为用户指定的背景色 */
+  --second-bg-color: #f8f8f8;
+  --text-color: #333333;
+  --code-color: #505050;
+  --link-color: #2484c1; /* 使用用户指定的链接颜色 */
+  --select-bg-color: rgba(36, 132, 193, 0.15);
+  --header-color: #333333;
+  
+  /* 字体设置 */
+  --base-font: "Vollkorn", Palatino, Times, serif; /* 使用用户指定的字体 */
+  --code-font: "Consolas", "Menlo", "Monaco", monospace, serif; /* 使用用户指定的代码字体 */
+  
+  /* 尺寸设置 */
+  --base-font-size: 19px; /* 使用用户指定的字体大小 */
+  --code-font-size: 0.9em;
+  --title-font-size: 3em; /* 使用用户指定的标题大小 */
+  --h2-font-size: 2em; /* 二级标题字体大小 */
+  --h3-font-size: 1.5em; /* 三级标题字体大小 */
+  --side-bar-width: 300px;
+  --max-content-width: 960px; /* 使用用户指定的内容宽度 */
+  --content-padding: 40px;
+  --p-spacing: 0;
+  --heading-spacing: 0.83em;
+}
+
+/* === 基本设置 === */
+html {
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--base-font);
+  color: var(--text-color);
+  line-height: 1.4; /* 使用用户指定的行高 */
+  text-align: justify; /* 使用用户指定的文本对齐方式 */
+  background-color: var(--main-bg-color);
+  margin: auto;
+}
+
+/* === 内容区域 === */
+#write {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  margin-bottom: 2em;
+  line-height: 1.53;
+  padding-top: 40px;
+}
+
+@media only screen and (min-width: 1400px) {
+  #write {
+    max-width: 1100px;
+  }
+}
+
+/* 调整段落间距 */
+p {
+  margin-top: 0;
+  -webkit-hypens: auto;
+  -moz-hypens: auto;
+  hyphens: auto;
+}
+
+/* === 标题 === */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--header-color);
+  font-weight: normal; /* 使用用户指定的字重 */
+  font-family: var(--base-font);
+}
+
+h1 {
+  font-size: var(--title-font-size);
+  margin-top: 1.6em;
+  text-align: center; /* 只有一级标题居中 */
+  border-bottom: none; /* 移除边框 */
+  padding-bottom: 0;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  margin-top: 2em;
+  text-align: left; /* 改为左对齐 */
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+h2:after {
+  border-bottom: 1px solid #2f2f2f;
+  content: '';
+  width: 100px;
+  display: block;
+  margin: 0 auto 0 0; /* 改为左对齐 */
+  height: 1px;
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  font-style: italic; /* 使用用户指定的斜体样式 */
+  margin-top: 3em;
+  text-align: left; /* 改为左对齐 */
+}
+
+h4, h5, h6 {
+  text-align: left; /* 其他标题左对齐 */
+}
+
+h1+h2, h2+h3 {
+  margin-top: 0.83em; /* 使用用户指定的连续标题间距 */
+}
+
+/* === 链接 === */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === 代码 === */
+code {
+  font-family: var(--code-font);
+  font-size: var(--code-font-size);
+  background: white;
+}
+
+pre {
+  font-family: var(--code-font);
+  font-size: var(--code-font-size);
+  background: white;
+}
+
+.md-fences {
+  margin-left: 1em;
+  padding-left: 1em;
+  border: 1px solid #ddd;
+  padding-bottom: 8px;
+  padding-top: 6px;
+  margin-bottom: 1.5em;
+}
+
+/* === 引用 === */
+blockquote {
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid #ddd;
+  color: inherit;
+}
+
+/* === 列表 === */
+ul {
+  list-style: square;
+  padding-left: 1.2em;
+}
+
+ol {
+  padding-left: 1.2em;
+}
+
+/* === 水平线 === */
+hr {
+  color: #ddd;
+  height: 1px;
+  margin: 2em 0;
+  border-top: solid 1px #ddd;
+  border-bottom: none;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* === 表格 === */
+table {
+  margin-bottom: 1.333333rem;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+table th, table td {
+  padding: 8px;
+  line-height: 1.333333rem;
+  vertical-align: top;
+  border: 1px solid #ddd; /* 为所有单元格添加四边框线 */
+}
+
+table th {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+/* === 任务列表 === */
+.task-list {
+  padding: 0;
+}
+
+.md-task-list-item {
+  padding-left: 1.6rem;
+}
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+  margin-top: calc(1rem - 12px);
+}
+
+/* === 元数据块 === */
+.md-meta-block {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* === 代码块语法高亮 === */
+.cm-s-inner .cm-keyword {
+  color: #6f42c1; /* 更柔和的关键字颜色 */
+}
+
+.cm-s-inner .cm-atom {
+  color: #005cc5; /* 更柔和的原子颜色 */
+}
+
+.cm-s-inner .cm-number {
+  color: #0086b3; /* 更柔和的数字颜色 */
+}
+
+.cm-s-inner .cm-def {
+  color: #6f42c1; /* 更柔和的定义颜色 */
+}
+
+.cm-s-inner .cm-variable {
+  color: #3a3a3a; /* 与文本颜色一致 */
+}
+
+.cm-s-inner .cm-variable-2 {
+  color: #05a;
+}
+
+.cm-s-inner .cm-variable-3 {
+  color: #085;
+}
+
+.cm-s-inner .cm-string {
+  color: #0a7a4c; /* 更柔和的字符串颜色 */
+}
+
+.cm-s-inner .cm-property {
+  color: black;
+}
+
+.cm-s-inner .cm-operator {
+  color: black;
+}
+
+.cm-s-inner .cm-comment {
+  color: #808080; /* 更柔和的注释颜色 */
+  font-style: italic;
+}
+
+/* === 目录 === */
+.md-toc {
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+
+.md-toc-content {
+  padding-left: 20px;
+}
+
+.md-toc-item {
+  color: var(--link-color);
+  font-size: 0.95em;
+  padding: 3px 0;
+}
+
+/* === 打印优化 === */
+@media print {
+  body {
+    background-color: white;
+  }
+  
+  code {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+}
+
+/* === 滚动条样式 === */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* === 响应式调整 === */
+@media screen and (max-width: 1200px) {
+  :root {
+    --content-padding: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --content-padding: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --content-padding: 20px;
+  }
+  
+  body {
+    padding: var(--content-padding);
+  }
+} 

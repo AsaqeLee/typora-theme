@@ -1,0 +1,403 @@
+/* 
+ * 我的 Typora 暗色主题
+ */
+
+:root {
+  /* 主色调 */
+  --main-color: #4a6fa5;
+  --main-bg-color: #252525; /* 调整为深色背景 */
+  --second-bg-color: #2a2a2a;
+  --text-color: #d0d0d0;
+  --code-color: #b8b8b8;
+  --link-color: #6d8cb3;
+  --select-bg-color: rgba(109, 140, 179, 0.2);
+  --header-color: #e6e6e6;
+  
+  /* 字体设置 */
+  --base-font: "Vollkorn", Palatino, Times, serif; /* 使用用户指定的字体 */
+  --code-font: "Consolas", "Menlo", "Monaco", monospace, serif; /* 使用用户指定的代码字体 */
+  
+  /* 尺寸设置 */
+  --base-font-size: 19px; /* 使用用户指定的字体大小 */
+  --code-font-size: 0.9em;
+  --title-font-size: 3em; /* 使用用户指定的标题大小 */
+  --h2-font-size: 2em; /* 二级标题字体大小 */
+  --h3-font-size: 1.5em; /* 三级标题字体大小 */
+  --side-bar-width: 300px;
+  --max-content-width: 960px; /* 使用用户指定的内容宽度 */
+  --content-padding: 40px;
+  --p-spacing: 0;
+  --heading-spacing: 0.83em;
+}
+
+/* === 基本设置 === */
+html {
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--base-font);
+  color: var(--text-color);
+  line-height: 1.4; /* 使用用户指定的行高 */
+  text-align: justify; /* 使用用户指定的文本对齐方式 */
+  background-color: var(--main-bg-color);
+  margin: auto;
+}
+
+/* === 内容区域 === */
+#write {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  margin-bottom: 2em;
+  line-height: 1.53;
+  padding-top: 40px;
+  padding: 0; /* 移除额外的内边距 */
+}
+
+@media only screen and (min-width: 1400px) {
+  #write {
+    max-width: 1100px;
+  }
+}
+
+/* 调整段落间距 */
+p {
+  margin-top: 0;
+  -webkit-hypens: auto;
+  -moz-hypens: auto;
+  hyphens: auto;
+}
+
+/* === 全局背景控制 === */
+#write-wrapper, #header-wrapper, #footer-wrapper, .typora-node .file-list-item, .pin-outline .outline-active {
+  background-color: var(--main-bg-color);
+}
+
+/* === 标题 === */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--header-color);
+  font-weight: normal; /* 使用用户指定的字重 */
+  font-family: var(--base-font);
+}
+
+h1 {
+  font-size: var(--title-font-size);
+  margin-top: 1.6em;
+  text-align: center; /* 只有一级标题居中 */
+  border-bottom: none; /* 移除边框 */
+  padding-bottom: 0;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  margin-top: 2em;
+  text-align: left; /* 改为左对齐 */
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+h2:after {
+  border-bottom: 1px solid #444;
+  content: '';
+  width: 100px;
+  display: block;
+  margin: 0 auto 0 0;
+  height: 1px;
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  font-style: italic; /* 使用用户指定的斜体样式 */
+  margin-top: 3em;
+  text-align: left; /* 改为左对齐 */
+}
+
+h4, h5, h6 {
+  text-align: left; /* 其他标题左对齐 */
+}
+
+h1+h2, h2+h3 {
+  margin-top: 0.83em; /* 使用用户指定的连续标题间距 */
+}
+
+/* === 链接 === */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === 代码 === */
+code {
+  font-family: var(--code-font);
+  font-size: var(--code-font-size);
+  background-color: #333;
+}
+
+pre {
+  font-family: var(--code-font);
+  font-size: var(--code-font-size);
+  background-color: #333;
+}
+
+.md-fences {
+  margin-left: 1em;
+  padding-left: 1em;
+  border: 1px solid #333;
+  padding-bottom: 8px;
+  padding-top: 6px;
+  margin-bottom: 1.5em;
+}
+
+/* === 引用 === */
+blockquote {
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid #444;
+  color: #aaa;
+}
+
+/* === 列表 === */
+ul {
+  list-style: square;
+  padding-left: 1.2em;
+}
+
+ol {
+  padding-left: 1.2em;
+}
+
+/* === 水平线 === */
+hr {
+  color: #555;
+  height: 1px;
+  margin: 2em 0;
+  border-top: solid 1px #555;
+  border-bottom: none;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* === 表格 === */
+table {
+  margin-bottom: 1.333333rem;
+  border-collapse: collapse;
+  border: 1px solid #333;
+}
+
+table th, table td {
+  padding: 8px;
+  line-height: 1.333333rem;
+  vertical-align: top;
+  border: 1px solid #333;
+}
+
+table th {
+  font-weight: bold;
+  background-color: #333; /* 暗色主题的表头背景 */
+}
+
+/* === 任务列表 === */
+.task-list {
+  padding: 0;
+}
+
+.md-task-list-item {
+  padding-left: 1.6rem;
+}
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+  margin-top: calc(1rem - 12px);
+}
+
+/* === 打印优化 === */
+@media print {
+  html {
+    font-size: 13px;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  code {
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #333;
+  }
+}
+
+/* 确保页面内容区域与边缘有足够间距 */
+#typora-source .CodeMirror-lines {
+  padding-left: var(--content-padding);
+  padding-right: var(--content-padding);
+  padding-top: var(--content-padding);
+}
+
+/* 调整文件树和侧边栏的内边距 */
+.sidebar-content {
+  padding: 20px 15px; /* 增加侧边栏内边距 */
+  background-color: #1e1e1e; /* 更暗的侧边栏背景色 */
+  width: var(--side-bar-width);
+}
+
+/* 文件树项目内边距 */
+.file-list-item {
+  padding: 8px 12px; /* 增加文件项目内边距 */
+  border-bottom: 1px solid #2c2c2c; /* 添加微弱的分隔线 */
+}
+
+/* 文件树背景色 */
+#file-library, #file-list-item, #file-library-tree {
+  background-color: #1e1e1e; /* 更暗的背景 */
+  color: var(--text-color);
+}
+
+/* 选中的文件项 */
+.file-list-item-selected {
+  background-color: #2d2d2d !important; /* 更暗的选中项背景 */
+}
+
+/* 高亮文件项 */
+.file-list-item:hover {
+  background-color: #2a2a2a !important; /* 更暗的悬停效果 */
+}
+
+/* 文件图标颜色 */
+.file-node-icon, .file-node-open-state {
+  color: #6d8cb3; /* 使用主题链接颜色 */
+}
+
+/* 文件名颜色 */
+.active .file-node-content {
+  color: #d0d0d0; /* 更柔和的文字颜色 */
+}
+
+/* 文件树顶部标签 */
+.ty-side-sort-btn {
+  background-color: #232323 !important; /* 标签背景色 */
+}
+
+/* 顶部栏背景 */
+.sidebar-header {
+  background-color: #1e1e1e !important;
+}
+
+/* 文件搜索框 */
+#file-search-input, .ty-search-input {
+  background-color: #2a2a2a !important;
+  color: #d0d0d0 !important;
+  border: 1px solid #333 !important;
+}
+
+/* 文件树和大纲分隔线 */
+.ty-sidebar-resize-handler {
+  background-color: #333;
+}
+
+/* 确保所有按钮也使用暗色主题 */
+.btn-default, .btn {
+  background-color: #2a2a2a !important;
+  color: #d0d0d0 !important;
+  border-color: #333 !important;
+}
+
+/* 确保所有边框和分割线也是暗色的 */
+* {
+  border-color: #333 !important;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #454545;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2a2a2a;
+}
+
+/* 顶部标题栏样式 */
+header, .megamenu-menu, .megamenu-opened header {
+  background-color: #1a1a1a !important;
+  color: #d0d0d0 !important;
+  border-bottom: 1px solid #2c2c2c !important;
+}
+
+/* 标题栏按钮和菜单 */
+.megamenu-menu-header-item, .megamenu-menu-list li a {
+  color: #d0d0d0 !important;
+}
+
+/* 标题栏下拉菜单 */
+.dropdown-menu {
+  background-color: #232323 !important;
+  border: 1px solid #333 !important;
+}
+
+.dropdown-menu > li > a {
+  color: #d0d0d0 !important;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #2a2a2a !important;
+  color: #fff !important;
+}
+
+/* 窗口标题 */
+#top-titlebar, #top-titlebar * {
+  background-color: #1a1a1a;
+  color: #d0d0d0;
+}
+
+/* 工具栏 */
+.toolbar-icon, .toolbar-icon-active {
+  color: #d0d0d0 !important;
+}
+
+/* 工具栏按钮 */
+.btn:hover, .btn:focus {
+  background-color: #333 !important;
+}
+
+/* 底部状态栏 */
+footer, #footer-word-count-info, .status-bar-inner {
+  background-color: #1a1a1a !important;
+  color: #a0a0a0 !important;
+  border-top: 1px solid #2c2c2c !important;
+}
+
+/* 对话框 */
+.modal-content {
+  background-color: #232323 !important;
+  border: 1px solid #333 !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid #333 !important;
+}
+
+.modal-footer {
+  border-top: 1px solid #333 !important;
+}
+
+/* 确保所有输入框都使用暗色主题 */
+input, textarea, select, .form-control {
+  background-color: #2a2a2a !important;
+  color: #d0d0d0 !important;
+  border: 1px solid #333 !important;
+} 
