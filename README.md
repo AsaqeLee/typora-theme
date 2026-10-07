@@ -1,46 +1,70 @@
-# 我的 Typora 主题
+# Typora Theme
 
-这是一个为 Typora Markdown 编辑器设计的主题，提供了明亮和暗色两种风格。
+A clean light and dark theme for the [Typora](https://typora.io/) Markdown editor.
 
-## 预览
+## Overview
 
-### 明亮主题
-![明亮主题预览](img/light-preview.png)
+This repository provides two CSS themes optimized for long-form writing and technical notes:
 
-### 暗色主题
-![暗色主题预览](img/dark-preview.png)
+| Theme file | Appearance |
+|------------|------------|
+| `theme/my-theme.css` | Light |
+| `theme/my-theme-dark.css` | Dark |
 
-## 安装方法
+Supporting assets include code-highlight styles under `theme/` and preview images under `img/`.
 
-1. 下载本仓库中的主题文件
-2. 打开 Typora，点击 "文件 -> 偏好设置"（Windows/Linux）或 "Typora -> 偏好设置"（macOS）
-3. 点击 "外观 -> 打开主题文件夹"
-4. 将下载的主题文件（CSS文件和字体文件夹）复制到打开的主题文件夹中
-5. 重启 Typora
-6. 在 Typora 的 "主题" 菜单中选择 "my-theme" 或 "my-theme-dark"
+## Features
 
-## 特点
+- Readable typography for prose and headings
+- Coordinated light and dark color palettes
+- Code-block highlighting support
+- Styling for common Markdown elements (tables, quotes, lists)
+- Support for math formulas and other Typora-rendered constructs
 
-- 清晰易读的排版
-- 精心选择的颜色方案
-- 代码块语法高亮
-- 针对各种 Markdown 元素优化的显示效果
-- 支持数学公式、表格等高级功能
-- 适合阅读和写作
+## Requirements
 
-## 自定义
+- Typora (desktop)
 
-如果你想调整主题，可以编辑 CSS 文件：
+## Installation
 
-- `theme/my-theme.css` - 明亮主题
-- `theme/my-theme-dark.css` - 暗色主题
+1. Clone or download this repository.
+2. Open Typora → **Preferences** (Windows/Linux: **File → Preferences**; macOS: **Typora → Preferences**).
+3. Open **Appearance → Open Theme Folder**.
+4. Copy the contents of `theme/` (CSS files and any font folders) into the Typora theme folder.
+5. Restart Typora.
+6. Choose **my-theme** or **my-theme-dark** from the **Themes** menu.
 
-主要颜色和字体变量都在 CSS 文件的 `:root` 部分定义，可以根据个人喜好进行修改。
+## Preview
 
-## 许可证
+### Light
 
-MIT
+![Light theme preview](img/light-preview.png)
 
-## 示例文件
+### Dark
 
-查看 `example.md` 文件可以预览主题对各种 Markdown 元素的渲染效果。 
+![Dark theme preview](img/dark-preview.png)
+
+## Customization
+
+Edit the CSS files directly. Color and font variables are defined in the `:root` section of each theme file.
+
+## Project layout
+
+```text
+typora-theme/
+├── theme/
+│   ├── my-theme.css
+│   ├── my-theme-dark.css
+│   └── code-highlight.css
+├── img/                 # Preview screenshots
+├── example.md           # Sample Markdown for visual checks
+└── generate_preview.py  # Optional preview helper
+```
+
+## Status / limitations
+
+Personal theme; visual details may differ slightly across Typora versions and operating systems. There is no separate LICENSE file in this repository; treat reuse as personal/educational unless a license is added later.
+
+## Example
+
+See [`example.md`](example.md) for a sample document that exercises common Markdown elements under this theme.
