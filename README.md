@@ -63,8 +63,12 @@ typora-theme/
 
 ## Status / limitations
 
-Personal theme; visual details may differ slightly across Typora versions and operating systems. There is no separate LICENSE file in this repository; treat reuse as personal/educational unless a license is added later.
+Personal theme; visual details may differ slightly across Typora versions and operating systems.
 
 ## Example
 
 See [`example.md`](example.md) for a sample document that exercises common Markdown elements under this theme.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
